@@ -342,9 +342,10 @@ class DatePicker extends Component {
       disabled && Style.disabled,
       disabled && customStyles.disabled
     ];
-
+    
+    var touchColor = style.backgroundColor == undefined ? 'transparent' : style.backgroundColor;
+    
     return (
-      var touchColor = style.backgroundColor == undefined ? 'transparent' : style.backgroundColor;
       <TouchableComponent
         style={[Style.dateTouch, style]}
         underlayColor={touchColor}
