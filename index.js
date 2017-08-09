@@ -344,9 +344,10 @@ class DatePicker extends Component {
     ];
 
     return (
+      var touchColor = style.backgroundColor == undefined ? 'transparent' : style.backgroundColor;
       <TouchableComponent
         style={[Style.dateTouch, style]}
-        underlayColor={'transparent'}
+        underlayColor={touchColor}
         onPress={this.onPressDate}
         testID={testID}
       >
