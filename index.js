@@ -5,6 +5,7 @@ import {
   Text,
   Image,
   Modal,
+  TouchableOpacity,
   TouchableHighlight,
   DatePickerAndroid,
   TimePickerAndroid,
@@ -342,13 +343,11 @@ class DatePicker extends Component {
       disabled && Style.disabled,
       disabled && customStyles.disabled
     ];
-    
-    var touchColor = style.backgroundColor == undefined ? 'transparent' : style.backgroundColor;
-    
+        
     return (
-      <TouchableComponent
+      <TouchableOpacity
         style={[Style.dateTouch, style]}
-        underlayColor={touchColor}
+        activeOpacity={0.8}
         onPress={this.onPressDate}
         testID={testID}
       >
@@ -423,7 +422,7 @@ class DatePicker extends Component {
             </View>
           </Modal>}
         </View>
-      </TouchableComponent>
+      </TouchableOpacity>
     );
   }
 }
